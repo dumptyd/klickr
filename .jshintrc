@@ -1,0 +1,12 @@
+{
+  "browser": true,
+  "node": true,
+  "esversion": 6,
+  "globals": {
+    "jQuery": true,
+    "$": true,
+    "Vue": true,
+    "swal": true,
+    "io": true
+  }
+}

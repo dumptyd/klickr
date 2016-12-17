@@ -1,0 +1,104 @@
+body{
+  margin:0;
+  padding:0;
+  font-family: 'Ubuntu' !important;
+}
+#app {
+  height:100vh;
+  width:100vw;
+  background: #ededed;
+  background: #6D57C5;
+  position: relative;
+  overflow: hidden;
+}
+.leaderboard {
+  border: 1px solid #fff;
+  background: rgba(100,100,100,0.5);
+  width: 180px;
+  position:absolute;
+  top:1%;
+  right:1%;
+  font-weight: bold;
+  color: #fff;
+  text-align: center;
+  padding-bottom: 5px;
+}
+
+.stats{
+  border: 1px solid #fff;
+  background: rgba(100,100,100,0.5);
+  width: 180px;
+  position:absolute;
+  top:1%;
+  left:1%;
+  color: #fff;
+  text-align: center;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  font-weight:bold;
+}
+
+@media only screen and (max-width: 500px) {
+  .stats{
+    width: 120px;
+  }
+  
+  .leaderboard {
+    width: 170px;
+  }
+}
+.total-players{
+  border-bottom: 1px solid #fff;
+  padding:5px;
+  color: #5ee;
+}
+
+.heading {
+  color: yellow;
+}
+
+.player, .frequency {
+  padding: 3px;
+  padding-bottom: 0;
+}
+
+.player-position{
+  position: absolute;
+  transition: all 2s ease-out;
+  font-weight: bold;
+  color: #fff;
+}
+
+.multiplier{
+  position: absolute;
+  height:32px;
+  width:32px;
+  background: url(../img/star.png);
+  background-size: cover;
+  z-index: 2;
+}
+
+.me {
+  color: yellow;
+}
+
+.ripple{
+  position: absolute;
+  height: 0;
+  width: 0;
+  display: block;
+  opacity: 0.3;
+  transform-origin: center center;
+  transition: all 0.2s ease-out;
+  background: #fff;
+  border-radius: 70%;
+}
+
+* {
+  -webkit-touch-callout:none;
+  -webkit-user-select:none;
+  -moz-user-select:none;
+  -ms-user-select:none;
+  user-select:none;
+  cursor: default;
+}
