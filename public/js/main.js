@@ -24,7 +24,7 @@ new Vue({
     
     //show enter name dialog and connect to socket
     swal({
-      title: "Klikr!",
+      title: "Klickr!",
       text: "Enter your name:",
       type: "input",
       closeOnConfirm: true,
