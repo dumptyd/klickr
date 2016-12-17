@@ -61,8 +61,6 @@ io.on('connection', function(socket){
   
   //`data` has {x, y, stats{multiplier, score}}
   socket.on('click', (data) => {
-    clicks++;
-    
     //find client who clicked on #app, get their `name` and `id`,
     //update score (not multiplier) and send updated stats
     let elem = clients.find(elem => elem.id == socket.id);
@@ -83,6 +81,11 @@ io.on('connection', function(socket){
     let id = elem.id;
     elem.score = data.stats.score;
     socket.emit('stats', {stats: elem});
+    if(data.notARealClick === true){
+      return;
+    }
+    
+    clicks++;
     
     //inform everyone (except this client) about the click if the last click was at least 
     //one second before.

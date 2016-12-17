@@ -21,7 +21,7 @@ new Vue({
       _this.clickFrequency = _this.timestamp*2;
       _this.stats.score+= Math.floor((_this.timestamp/2)*_this.stats.multiplier);
       if(isConnected){
-        socket.emit('click', {x:0, y:0, stats:_this.stats, broadcast: false});
+        socket.emit('click', {x:0, y:0, stats:_this.stats, broadcast: false, notARealClick: true});
       }
       _this.timestamp = 0;
     }, 500);
